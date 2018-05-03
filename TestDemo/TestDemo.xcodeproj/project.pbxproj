@@ -15,6 +15,9 @@
 		8EA4A192209ADB3000089AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4A191209ADB3000089AED /* Assets.xcassets */; };
 		8EA4A195209ADB3000089AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4A193209ADB3000089AED /* LaunchScreen.storyboard */; };
 		8EA4A19F209AE2B400089AED /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4A19E209AE2B400089AED /* TwoViewController.m */; };
+		8EA4A1A3209AF04F00089AED /* OneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA4A1A1209AF04F00089AED /* OneTableCell.m */; };
+		8EA4A1A4209AF04F00089AED /* OneTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4A1A2209AF04F00089AED /* OneTableCell.xib */; };
+		8EA4A1A6209AF3C200089AED /* mj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EA4A1A5209AF3C200089AED /* mj.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		8EA4A196209ADB3000089AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EA4A19D209AE2B400089AED /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		8EA4A19E209AE2B400089AED /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		8EA4A1A0209AF04F00089AED /* OneTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableCell.h; sourceTree = "<group>"; };
+		8EA4A1A1209AF04F00089AED /* OneTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableCell.m; sourceTree = "<group>"; };
+		8EA4A1A2209AF04F00089AED /* OneTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneTableCell.xib; sourceTree = "<group>"; };
+		8EA4A1A5209AF3C200089AED /* mj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mj.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +55,12 @@
 		01422EF3209AE00B009260C1 /* ztma */ = {
 			isa = PBXGroup;
 			children = (
+				8EA4A1A5209AF3C200089AED /* mj.jpg */,
 				01422EF4209AE035009260C1 /* OneViewController.h */,
 				01422EF5209AE035009260C1 /* OneViewController.m */,
+				8EA4A1A0209AF04F00089AED /* OneTableCell.h */,
+				8EA4A1A1209AF04F00089AED /* OneTableCell.m */,
+				8EA4A1A2209AF04F00089AED /* OneTableCell.xib */,
 			);
 			name = ztma;
 			sourceTree = "<group>";
@@ -166,7 +177,9 @@
 			files = (
 				8EA4A195209ADB3000089AED /* LaunchScreen.storyboard in Resources */,
 				8EA4A192209ADB3000089AED /* Assets.xcassets in Resources */,
+				8EA4A1A6209AF3C200089AED /* mj.jpg in Resources */,
 				8EA4A190209ADB3000089AED /* Main.storyboard in Resources */,
+				8EA4A1A4209AF04F00089AED /* OneTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,9 +193,9 @@
 				8EA4A18D209ADB3000089AED /* ViewController.m in Sources */,
 				8EA4A18A209ADB3000089AED /* AppDelegate.m in Sources */,
 				8EA4A187209ADB3000089AED /* main.m in Sources */,
-
 				8EA4A19F209AE2B400089AED /* TwoViewController.m in Sources */,
 				01422EF6209AE035009260C1 /* OneViewController.m in Sources */,
+				8EA4A1A3209AF04F00089AED /* OneTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
