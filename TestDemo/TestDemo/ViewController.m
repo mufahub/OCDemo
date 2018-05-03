@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TwoViewController.h"
 
 @interface ViewController ()
 
@@ -19,12 +20,23 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor greenColor];
+    
+    
+    UIButton *twoBtn = [[UIButton alloc] init];
+    twoBtn.frame = CGRectMake(100, 200, 100, 40);
+    [twoBtn setTitle:@"two" forState:UIControlStateNormal];
+    [twoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:twoBtn];
+    [twoBtn addTarget:self action:@selector(towBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)towBtnClick {
+    
+    TwoViewController *twoVC = [[TwoViewController alloc] init];
+    
+    [self.navigationController pushViewController:twoVC animated:YES];
 }
 
 
