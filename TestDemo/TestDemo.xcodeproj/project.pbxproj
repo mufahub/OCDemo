@@ -102,7 +102,7 @@
 				TargetAttributes = {
 					010A9518209AB27F00FE3971 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -278,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JJD6WN2BZ;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -285,6 +286,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZTMAN1.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b8030592-5320-4071-a817-eace5a11b4e0";
+				PROVISIONING_PROFILE_SPECIFIER = "TestDemo-development";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -293,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JJD6WN2BZ;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -300,6 +304,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZTMAN1.TestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2e6188e3-169f-4738-bdc1-e434567e75a3";
+				PROVISIONING_PROFILE_SPECIFIER = "TestDemo-distribution";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
