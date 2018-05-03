@@ -7,21 +7,47 @@
 //
 
 #import "OneViewController.h"
+#import "OneTableCell.h"
 
-@interface OneViewController ()
-
+@interface OneViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong)UITableView *tableView;
+@property (nonatomic, strong)NSMutableArray *muArray;
 @end
 
+static NSString *oneCellid = @"oneCellid";
 @implementation OneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    self.title = @"公司";
+    self.muArray = [NSMutableArray array];
+    for (int i = 0; i < 24; i++) {
+        [_muArray addObject:[@"李四 " stringByAppendingFormat:@"%02d",i]];
+    }
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI {
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    [self.view addSubview:self.tableView];
+    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    [_tableView registerNib:[UINib nibWithNibName:@"OneTableCell" bundle:nil] forCellReuseIdentifier:oneCellid];
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+    _tableView.estimatedRowHeight = 300;
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.muArray.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    OneTableCell *cell = [tableView dequeueReusableCellWithIdentifier:oneCellid forIndexPath:indexPath];
+    cell.name = self.muArray[indexPath.row];
+    return cell;
 }
 
 /*
