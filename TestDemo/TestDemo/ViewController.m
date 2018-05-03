@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OneViewController.h"
 
 @interface ViewController ()
 
@@ -19,12 +20,20 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor greenColor];
+    
+    UIButton *oneBtn = [[UIButton alloc] init];
+    oneBtn.frame = CGRectMake(100, 100, 100, 40);
+    [oneBtn setTitle:@"one" forState:UIControlStateNormal];
+    [oneBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [self.view addSubview:oneBtn];
+    [oneBtn addTarget:self action:@selector(oneBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)oneBtnClick {
+    OneViewController *oneVC = [[OneViewController alloc] init];
+    [self.navigationController pushViewController:oneVC animated:YES];
 }
 
 
